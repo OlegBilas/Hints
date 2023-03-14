@@ -11,3 +11,5 @@ Vimeo - робота з відео (тег iframe)
 lodash - (функції throttling, debounce)
 
 lazysizes - завантаження картинок в лінивому режимі для браузерів, які не підтримують атрибут тега img loading="lazy" (Safari)
+
+momentjs, date-fns робота з датами
