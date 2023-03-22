@@ -1,0 +1,2 @@
+// Generation of random number in range from min-number to max-number
+cost number = Math.random() * (max - min) + min;
