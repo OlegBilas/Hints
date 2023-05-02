@@ -8,4 +8,4 @@ styled-components, @emotion/react (аналог) - СТИЛІЗАЦІЯ КОМП
 
 prop-types - опис типів даних (заміна TypeScript на милих та середніх проєктах)
 
-uuid, nanoid - генерація унікальних id для елементів форми
+shortid, uuid, nanoid - генерація унікальних id для елементів форми
