@@ -14,7 +14,8 @@ VSCode-styled components,
 colorise, 
 One Dark Pro.
 
-Для підключення автозбереження, перевірити налаштування у пункті меню File - (галка в Autosave). Для автоматичного форматування коду при зміні фокуса, прописати такі налаштування в файлі settings.json у папці .vscode
+Для підключення автозбереження, перевірити налаштування у пункті меню File - (галка в Autosave).
+Для автоматичного форматування коду при зміні фокуса, прописати такі налаштування в файлі settings.json у папці .vscode для Prettier:
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
