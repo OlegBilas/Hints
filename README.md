@@ -12,6 +12,8 @@ nanoid, shortid, uuid - генерація унікальних id для еле
 
 formik - форми для Реакта (із вбудованим станом)
 
+react-debounce-input - denounce для поля вводу у реакт
+
 react-select - кастомний тег селект для реакта
 
 react-video - рендеринг відео (незалежно від джерела)
