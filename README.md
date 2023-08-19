@@ -26,7 +26,7 @@ jsonwebtoken - для створення jwt-токена.
 verify(jwt-токен, секрений ключ) - повертає payload, при невдачі викидає помилку, тому потрібно обрамляти в конструкцію try{} catch{}
 
 multer - для отримання даних із frontend разом з бінарними даними. Розподіляє текстові поля в req.body, а бінарні файли в req.file (якщо один файл), або в req.files (якщо кілька файлів).
-Методом multer({storadge: {destination: <>, filename: (req, file, callback)=>callback(null, <логіка перейменування файлів або file.originalname>)}}) створюється middleware, в якій є методи: single(назва поля з одним файлом), array(назва поля з кількома файлами, кількість файлів) fields(масив об'єктів у форматі: {name: <назва поля>, maxCount: <кількість файлів>})
+Методом multer({storadge: {destination: <назва папки для тимчасового зберігання файлів>, filename: (req, file, callback)=>callback(null, <логіка перейменування файлів або file.originalname>)}}) створюється middleware, в якій є методи: single(назва поля з одним файлом), array(назва поля з кількома файлами, кількість файлів) fields(масив об'єктів у форматі: {name: <назва поля>, maxCount: <кількість файлів>})
 
 Методи express:
 express() - ініціалізує веб-сервер
