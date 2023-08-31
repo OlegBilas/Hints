@@ -1,4 +1,4 @@
-# Hints
+# Node
 Usefull things
 
 Відповідність методів бібліотек валідації даних:
@@ -33,3 +33,53 @@ express() - ініціалізує веб-сервер
 json() - отримання із req.body та відсилання даних в res.body у форматі json, викликати всередині middleware use
 static(папка для роздачі файлів) - відкриває вказану папку для передачі файлів на frontend, викликати всередині middleware use
 listen(порт, колбек після запуску) - запуск веб-сервера на вказаному порту
+
+
+
+Деплой проєкту проєкту Node.js на -https://render.com/ (https://www.youtube.com/watch?v=39ngI2PF43Q)
+У разі виявлення проблем, окремо вкажіть в package.json версію node, так як по замовчуванню Render бере 14 версію, яка не підтримує нові методи строк/масивів. В строці - build command - yarn - НІЧОГО НЕ ЗМІНЮЙТЕ, start command - npm run start - ваш скрипт start для запуску повинен починатись зі слова node - це обов‘язково, бо без цього не буде запускатись.
+задля уникнення конфліктів з https://render.com/ використовуйте mongoose версії 6.9.2
+як прописати в swagger завантаження зображення https://swagger.io/docs/specification/describing-request-body/file-upload/ , https://www.youtube.com/watch?v=ZwcXLmeSm70
+для збереження файлів використовуйте хмарне сховище https://cloudinary.com/ - легка реєстрація, зручне апі, готові модулі для підключення
+//router
+router.post('/user', authenticate, upload.single('avatar'), ctrl.addAvatar);
+
+//middleware upload
+const cloudinary = require('cloudinary').v2;
+const { CloudinaryStorage } = require('multer-storage-cloudinary');
+const multer = require('multer');
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_NAME,
+  api_key: process.env.CLOUDINARY_KEY,
+  api_secret: process.env.CLOUDINARY_SECRET,
+});
+
+const storage = new CloudinaryStorage({
+  cloudinary: cloudinary,
+  params: async (req, file) => {
+    // Determine the folder based on file properties or request data
+    let folder;
+    if (file.fieldname === 'avatar') {
+      folder = 'avatars';
+    } else if (file.fieldname === 'documents') {
+      folder = 'documents';
+    } else {
+      folder = 'misc';
+    }
+    return {
+      folder: folder,
+      allowed_formats: ['jpg', 'png'], // Adjust the allowed formats as needed
+      public_id: file.originalname, // Use original filename as the public ID
+    };
+  },
+});
+
+const upload = multer({ storage });
+
+module.exports = upload;
+
+//controller
+const someFunc = async (req, res) => {
+  const avatarURL = req.file.path;
+};
