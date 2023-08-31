@@ -46,3 +46,37 @@ useLocation() - повертає об'єкт location із складовими 
 Збереження даних між рендерами: якщо є залежності, то викориосвується useMemo(), якщо немає - то ref = useRef() із властивістю ref.current
 
 setState, setSearchParams (тобто методи, які запускають повторний рендер) потрібно використовувати всередині хуків із залежностями (useEffect(), наприклад) інакше виникає безкінечний рендеринг
+
+Ресурси для роботи на проєкті по React:
+Робота з формами та їх валідація
+https://formik.org/docs/api/useFormik + https://formik.org/docs/guides/validation
+Календар
+https://mui.com/x/react-date-pickers/getting-started/
+https://reactdatepicker.com/
+Pобота з завантаженням зображень
+<input type=«file»>
+https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL для створення передперегляду фото
+https://developer.mozilla.org/en-US/docs/Web/API/FormData/FormData для відправлення файлу і значення форми на бекенд
+Статистика
+https://recharts.org/en-US/
+Робота з датами
+https://date-fns.org/
+https://dance2die.github.io/calendar-dates/#/
+import { startOfMonth, endOfMonth, endOfWeek, eachDayOfInterval, startOfWeek } from ‘date-fns’ - для роботи з днями місяця
+import { startOfWeek, eachDayOfInterval } from ‘date-fns’ - для роботи з днями тижня
+Helpers
+UI-бібліотеки
+https://mui.com/x/react-date-pickers/getting-started/
+https://blueprintjs.com/
+Додаткові фічі
+Перетягування тасок:
+https://www.npmjs.com/package/react-beautiful-dnd
+Mультимовність:
+https://www.i18next.com/
+Google-кнопка авторизації
+https://www.youtube.com/watch?v=oQaoymCOW8o
+https://github.com/NadyaHristuk/lesson-swagger-googleOAUTH2
+Онбордінг
+https://www.npmjs.com/package/@reactour/tour
+Лайфхакі
+Зручне розширення для роботи з гілками репозиторія Git Graph
