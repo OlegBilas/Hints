@@ -17,7 +17,7 @@ momentjs, date-fns робота з датами
 Локалізація форматування дат в date-fns. 
 import {format} from "date-fns";
 import {uk} from "date-fns";
-format(<дата>, "dd MMMM yyyy", {locale: uk})
+format(<дата>, "dd MMMM yyyy", {locale: uk}) - повертає тектове представлення дати у заданому форматі
 
 Різниця дат в date-fns:
 formatDistance(<дата початкова>, <дата кінцева>) - приблизна різниця в часі 
