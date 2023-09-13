@@ -79,7 +79,28 @@ const upload = multer({ storage });
 
 module.exports = upload;
 
-//controller
-const someFunc = async (req, res) => {
-  const avatarURL = req.file.path;
-};
+Валідація даних в моделі Mongoose (порівняння даних часу, що записані в базу у вигляді рядка): 
+{
+    endTime: {
+      type: String,
+      match: timeRegexp,
+      required: true,
+      validate: {
+        validator: function (value) {
+       
+          return value >= this.startTime;
+        },
+        message: 'Your message',
+      },
+    },
+    // ... rest of your schema fields ...
+  },
+
+Прописування текстів помилок в схемі Joi:
+  password: Joi.string().pattern(passwordRegexp).min(7).required().empty(false).messages({
+    'string.base': 'The password must be a string.',
+    'any.required': 'The password field is required.',
+    'string.empty': 'The password must not be empty.',
+    'string.min': 'The password must be not less 7 symbols.',
+    'string.pattern.base': 'The password must consist of 6 English letters and 1 number.',
+  }),
