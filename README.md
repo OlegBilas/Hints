@@ -104,3 +104,4 @@ module.exports = upload;
     'string.min': 'The password must be not less 7 symbols.',
     'string.pattern.base': 'The password must consist of 6 English letters and 1 number.',
   }),
+  
