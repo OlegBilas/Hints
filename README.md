@@ -82,3 +82,13 @@ https://github.com/NadyaHristuk/lesson-swagger-googleOAUTH2
 https://www.npmjs.com/package/@reactour/tour
 Лайфхакі
 Зручне розширення для роботи з гілками репозиторія Git Graph
+
+Налаштування маршрутизації для різних ресурсів для деполю:
+
+https://create-react-app.dev/docs/deployment#github-pages
+https://vitejs.dev/guide/static-deploy.html#deploying-a-static-site
+https://github.com/ErickKS/vite-deploy
+https://blog.devgenius.io/how-to-deploy-your-vite-react-app-to-github-pages-with-and-without-react-router-b060d912b10e)https://create-react-app.dev/docs/deployment#github-pages
+https://vitejs.dev/guide/static-deploy.html#deploying-a-static-site
+https://github.com/ErickKS/vite-deploy
+https://blog.devgenius.io/how-to-deploy-your-vite-react-app-to-github-pages-with-and-without-react-router-b060d912b10e
